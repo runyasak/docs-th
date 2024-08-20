@@ -13,18 +13,17 @@ onMounted(load)
   <section id="hero">
     <img id="uwu" alt="Vue.js Kawaii Logo by @icarusgkx" />
     <h1 class="tagline">
-      The
-      <span class="accent">Progressive</span>
-      <br />JavaScript Framework
+      JavaScript Framework
+      <br />
+      <span class="accent">แห่งยุคสมัย</span>
     </h1>
     <p class="description">
-      An approachable, performant and versatile framework for building web
-      user interfaces.
+      Framework ที่ใช้ง่าย ทรงพลัง และครบเครื่องสำหรับการสร้างเว็บ
     </p>
     <p class="actions">
       <VueMasteryModal />
       <a class="get-started" href="/guide/introduction.html">
-        Get Started
+        เริ่มต้น
         <svg
           class="icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -37,9 +36,9 @@ onMounted(load)
           />
         </svg>
       </a>
-      <a class="setup" href="/guide/quick-start.html">Install</a>
+      <a class="setup" href="/guide/quick-start.html">ติดตั้ง</a>
       <a class="security" href="https://v2.vuejs.org/eol/" target="_blank">
-        Get Security Updates for Vue 2
+        Security Updates สำหรับ Vue 2
         <svg
           class="icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -78,24 +77,24 @@ onMounted(load)
 
   <section id="highlights" class="vt-box-container">
     <div class="vt-box">
-      <h2>Approachable</h2>
+      <h2>ใช้งานง่าย</h2>
       <p>
-        Builds on top of standard HTML, CSS and JavaScript with intuitive
-        API and world-class documentation.
+        เขียนด้วย HTML, CSS และ JavaScript พื้นฐาน
+        พร้อม API ที่เข้าใจง่าย และ documentation ระดับโลก
       </p>
     </div>
     <div class="vt-box">
-      <h2>Performant</h2>
+      <h2>ทรงพลัง</h2>
       <p>
-        Truly reactive, compiler-optimized rendering system that rarely
-        requires manual optimization.
+        ระบบการตอบสนองไว พร้อมกับ compiler ที่พร้อมปรับแต่งมาสมบูรณ์
+        โดยแทบไม่ต้องปรับเอง
       </p>
     </div>
     <div class="vt-box">
-      <h2>Versatile</h2>
+      <h2>ครบเครื่อง</h2>
       <p>
-        A rich, incrementally adoptable ecosystem that scales between a
-        library and a full-featured framework.
+        ระบบนิเวศที่สมบูรณ์ เพียบพร้อมด้วยเครื่องมือที่ครบครัน
+        ที่เติบโตไปทั้ง Library และ Framework อย่างสมบูรณ์
       </p>
     </div>
   </section>
