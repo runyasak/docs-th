@@ -370,4 +370,9 @@ html:not(.dark) .accent,
     margin: -60px auto -10px;
   }
 }
+
+/* Override for Thai */
+.tagline {
+  line-height: 1.5;
+}
 </style>
