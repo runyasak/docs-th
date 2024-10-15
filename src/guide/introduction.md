@@ -7,7 +7,7 @@ footer: false
 :::info คุณกำลังอ่านเอกสารของ vue 3!
 
 - Vue 2 เลิกซัพพอร์ตเเละพัฒนาเมื่อวันที่ **31 ธันวาคม 2023**. สามารถอ่านเเละเรียนรู้เพิ่มเติมได้ที่ [Vue 2 EOL](https://v2.vuejs.org/eol/).
-- อัพเกรดจาก Vue 2? สามารถอ่านเพิ่มเติมได้ที่ [คู่มือการอัพเกรด](https://v3-migration.vuejs.org/).
+- อัพเกรดจาก Vue 2? สามารถอ่านเพิ่มเติมได้ที่ [คู่มือการย้ายเวอร์ชั่น](https://v3-migration.vuejs.org/).
   :::
 
 <style src="@theme/styles/vue-mastery.css"></style>

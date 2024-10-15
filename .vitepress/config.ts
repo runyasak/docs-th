@@ -23,7 +23,7 @@ const nav: ThemeConfig['nav'] = [
         link: 'https://v2.vuejs.org'
       },
       {
-        text: 'อัพเกรดจาก Vue 2',
+        text: 'ย้ายเวอร์ชั่นจาก Vue 2',
         link: 'https://v3-migration.vuejs.org/'
       }
     ]
@@ -52,14 +52,23 @@ const nav: ThemeConfig['nav'] = [
             link: 'https://certificates.dev/vuejs/?ref=vuejs-nav'
           },
           { text: 'หางาน', link: 'https://vuejobs.com/?ref=vuejs' },
-          { text: 'ร้านขายเสื้อเชิ้ต', link: 'https://vue.threadless.com/' }
+          {
+            text: 'ร้านขายเสื้อเชิ้ต',
+            link: 'https://vue.threadless.com/'
+          }
         ]
       },
       {
         text: 'Libraries มาตราฐาน',
         items: [
-          { text: 'Vue Router (ตัวจัดการ route)', link: 'https://router.vuejs.org/' },
-          { text: 'Pinia (ตัวจัดการ state)', link: 'https://pinia.vuejs.org/' },
+          {
+            text: 'Vue Router (ตัวจัดการ route)',
+            link: 'https://router.vuejs.org/'
+          },
+          {
+            text: 'Pinia (ตัวจัดการ state)',
+            link: 'https://pinia.vuejs.org/'
+          },
           { text: 'Tooling Guide', link: '/guide/scaling-up/tooling.html' }
         ]
       },
