@@ -1,32 +1,32 @@
-# Creating a Vue Application {#creating-a-vue-application}
+# สร้างแอพพลิเคชั่นด้วย Vue {#creating-a-vue-application}
 
-## The application instance {#the-application-instance}
+## ตัวแทนของแอปพลิเคชัน (The application instance) {#the-application-instance}
 
-Every Vue application starts by creating a new **application instance** with the [`createApp`](/api/application#createapp) function:
+ทุกแอปพลิเคชันของ Vue จะเริ่มต้นด้วยการสร้าง **ตัวแทนของแอปพลิเคชัน** ใหม่ด้วยฟังก์ชัน [`createApp`](/api/application#createapp):
 
 ```js
 import { createApp } from 'vue'
 
 const app = createApp({
-  /* root component options */
+  /* ตัวเลือกของ root component */
 })
 ```
 
-## The Root Component {#the-root-component}
+## คอมโพแนนซ์หลัก (Root Component) {#the-root-component}
 
-The object we are passing into `createApp` is in fact a component. Every app requires a "root component" that can contain other components as its children.
+อ็อบเจกต์ที่เราส่งไปใน `createApp` จริงๆ แล้วคือ component หนึ่ง ทุกแอปจะต้องมี "root component" ที่สามารถมี component อื่นๆ เป็นลูกได้
 
-If you are using Single-File Components, we typically import the root component from another file:
+ถ้าคุณใช้ Single-File Components เรามักจะ import root component มาจากไฟล์อื่น:
 
 ```js
 import { createApp } from 'vue'
-// import the root component App from a single-file component.
+// import root component App จาก single-file component
 import App from './App.vue'
 
 const app = createApp(App)
 ```
 
-While many examples in this guide only need a single component, most real applications are organized into a tree of nested, reusable components. For example, a Todo application's component tree might look like this:
+แม้ว่าในตัวอย่างหลายๆ อันในไกด์นี้จะต้องการแค่ component เดียว แต่แอปพลิเคชันจริงๆ ส่วนมากจะถูกจัดเรียงเป็น tree ของ component ที่ซ้อนกันและสามารถใช้งานซ้ำได้ ตัวอย่างเช่น tree ของ component ในแอป To-do อาจจะดูเป็นแบบนี้:
 
 ```
 App (root component)
@@ -39,11 +39,11 @@ App (root component)
    └─ TodoStatistics
 ```
 
-In later sections of the guide, we will discuss how to define and compose multiple components together. Before that, we will focus on what happens inside a single component.
+ในส่วนถัดๆ ไปของไกด์ เราจะพูดถึงวิธีการนิยามและรวมหลายๆ component เข้าด้วยกัน แต่ก่อนหน้านั้น เราจะมุ่งเน้นไปที่สิ่งที่เกิดขึ้นภายใน component เดียว (Single Component)
 
-## Mounting the App {#mounting-the-app}
+## การเชื่อมต่อแอปกับหน้าเว็บ (mounting the app) {#mounting-the-app}
 
-An application instance won't render anything until its `.mount()` method is called. It expects a "container" argument, which can either be an actual DOM element or a selector string:
+ตัวแทนของแอปพลิเคชัน (Instance) จะไม่แสดงผลอะไรจนกว่าจะมีการเรียกใช้เมธอด `.mount()` มันต้องการอาร์กิวเมนต์ "container" ซึ่งสามารถเป็น element จริงๆ ใน DOM หรือ selector string ก็ได้:
 
 ```html
 <div id="app"></div>
@@ -53,13 +53,13 @@ An application instance won't render anything until its `.mount()` method is cal
 app.mount('#app')
 ```
 
-The content of the app's root component will be rendered inside the container element. The container element itself is not considered part of the app.
+เนื้อหาของ root component ของแอปจะถูกแสดงผลภายใน container element โดย container element เองจะไม่ถือว่าเป็นส่วนหนึ่งของแอป
 
-The `.mount()` method should always be called after all app configurations and asset registrations are done. Also note that its return value, unlike the asset registration methods, is the root component instance instead of the application instance.
+เมธอด `.mount()` ควรถูกเรียกหลังจากการตั้งค่าและการลงทะเบียน asset ของแอปทั้งหมดเรียบร้อยแล้ว นอกจากนี้ยังควรสังเกตว่าค่าที่ถูกส่งกลับจาก `.mount()` ซึ่งแตกต่างจากเมธอดการลงทะเบียน asset อื่นๆ ค่าที่ส่งกลับคือตัวแทนของ root component แทนที่จะเป็นตัวแทนของแอปพลิเคชัน
 
 ### In-DOM Root Component Template {#in-dom-root-component-template}
 
-The template for the root component is usually part of the component itself, but it is also possible to provide the template separately by writing it directly inside the mount container:
+โดยปกติแล้ว template สำหรับ root component จะเป็นส่วนหนึ่งของตัว component เอง แต่ก็สามารถแยก template ออกมาได้โดยเขียนไว้ภายใน mount container:
 
 ```html
 <div id="app">
@@ -81,13 +81,13 @@ const app = createApp({
 app.mount('#app')
 ```
 
-Vue will automatically use the container's `innerHTML` as the template if the root component does not already have a `template` option.
+Vue จะใช้ `innerHTML` ของ container เป็น template โดยอัตโนมัติ ถ้า root component ไม่มีตัวเลือก `template` อยู่แล้ว
 
-In-DOM templates are often used in applications that are [using Vue without a build step](/guide/quick-start.html#using-vue-from-cdn). They can also be used in conjunction with server-side frameworks, where the root template might be generated dynamically by the server.
+In-DOM templates มักจะถูกใช้ในแอปที่ [ใช้ Vue โดยไม่มีขั้นตอนการ build](/guide/quick-start.html#using-vue-from-cdn) และยังสามารถใช้ร่วมกับเฟรมเวิร์กที่ทำงานฝั่งเซิร์ฟเวอร์ ซึ่ง template ของ root อาจจะถูกสร้างแบบไดนามิกโดยเซิร์ฟเวอร์
 
-## App Configurations {#app-configurations}
+## การตั้งค่าแอป {#app-configurations}
 
-The application instance exposes a `.config` object that allows us to configure a few app-level options, for example, defining an app-level error handler that captures errors from all descendant components:
+ตัวแทนของแอปพลิเคชันจะมีอ็อบเจกต์ `.config` ที่เปิดโอกาสให้เราตั้งค่าบางอย่างในระดับแอปได้ ตัวอย่างเช่น การกำหนด error handler ที่จัดการกับข้อผิดพลาดจากทุก component ลูก:
 
 ```js
 app.config.errorHandler = (err) => {
@@ -95,19 +95,19 @@ app.config.errorHandler = (err) => {
 }
 ```
 
-The application instance also provides a few methods for registering app-scoped assets. For example, registering a component:
+ตัวแทนของแอปพลิเคชันยังมีเมธอดบางอย่างที่ช่วยในการลงทะเบียน asset ในระดับแอป ตัวอย่างเช่น การลงทะเบียน component:
 
 ```js
 app.component('TodoDeleteButton', TodoDeleteButton)
 ```
 
-This makes the `TodoDeleteButton` available for use anywhere in our app. We will discuss registration for components and other types of assets in later sections of the guide. You can also browse the full list of application instance APIs in its [API reference](/api/application).
+สิ่งนี้ทำให้ `TodoDeleteButton` สามารถถูกใช้งานได้ทุกที่ในแอป เราจะพูดถึงการลงทะเบียน component และประเภทของ asset อื่นๆ ในส่วนถัดๆ ไปของไกด์ คุณสามารถดูรายการ API ของตัวแทนของแอปพลิเคชันได้ใน [API reference](/api/application)
 
-Make sure to apply all app configurations before mounting the app!
+อย่าลืมตั้งค่าทั้งหมดก่อนที่จะ mount แอป!
 
-## Multiple application instances {#multiple-application-instances}
+## ตัวแทนของแอปพลิเคชันหลายตัว {#multiple-application-instances}
 
-You are not limited to a single application instance on the same page. The `createApp` API allows multiple Vue applications to co-exist on the same page, each with its own scope for configuration and global assets:
+คุณไม่ได้ถูกจำกัดให้มีแค่ตัวแทนของแอปพลิเคชันเพียงตัวเดียวในหน้าเดียว API `createApp` อนุญาตให้หลายแอปพลิเคชัน Vue อยู่ร่วมกันในหน้าเดียว แต่ละแอปจะมี scope ของการตั้งค่าและ asset แบบ global เป็นของตัวเอง:
 
 ```js
 const app1 = createApp({
@@ -121,4 +121,4 @@ const app2 = createApp({
 app2.mount('#container-2')
 ```
 
-If you are using Vue to enhance server-rendered HTML and only need Vue to control specific parts of a large page, avoid mounting a single Vue application instance on the entire page. Instead, create multiple small application instances and mount them on the elements they are responsible for.
+ถ้าคุณใช้ Vue เพื่อเพิ่มความสามารถให้กับ HTML ที่เรนเดอร์จากฝั่งเซิร์ฟเวอร์ และคุณต้องการให้ Vue ควบคุมแค่บางส่วนของหน้าที่มีขนาดใหญ่ อย่าทำการ mount ตัวแทนของแอป Vue เพียงตัวเดียวครอบคลุมทั้งหน้า ควรสร้างตัวแทนแอปเล็กๆ หลายตัว และทำการ mount พวกมันบน element ที่พวกมันรับผิดชอบ

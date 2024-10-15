@@ -2,12 +2,12 @@
 footer: false
 ---
 
-# Introduction {#introduction}
+# {#introduction}
 
-:::info You are reading the documentation for Vue 3!
+:::info คุณกำลังอ่านเอกสารของ vue 3!
 
-- Vue 2 support has ended on **Dec 31, 2023**. Learn more about [Vue 2 EOL](https://v2.vuejs.org/eol/).
-- Upgrading from Vue 2? Check out the [Migration Guide](https://v3-migration.vuejs.org/).
+- Vue 2 เลิกซัพพอร์ตเเละพัฒนาเมื่อวันที่ **31 ธันวาคม 2023**. สามารถอ่านเเละเรียนรู้เพิ่มเติมได้ที่ [Vue 2 EOL](https://v2.vuejs.org/eol/).
+- อัพเกรดจาก Vue 2? สามารถอ่านเพิ่มเติมได้ที่ [คู่มือการอัพเกรด](https://v3-migration.vuejs.org/).
   :::
 
 <style src="@theme/styles/vue-mastery.css"></style>
@@ -16,18 +16,18 @@ footer: false
     <div class="banner-wrapper">
       <img class="banner" alt="Vue Mastery banner" width="96px" height="56px" src="https://storage.googleapis.com/vue-mastery.appspot.com/flamelink/media/vuemastery-graphical-link-96x56.png" />
     </div>
-    <p class="description">Learn Vue with video tutorials on <span>VueMastery.com</span></p>
+    <p class="description">เรียนรู้ตัวอย่างของ Vue ผ่านวีดีโอได้บน <span>VueMastery.com</span></p>
     <div class="logo-wrapper">
         <img alt="Vue Mastery Logo" width="25px" src="https://storage.googleapis.com/vue-mastery.appspot.com/flamelink/media/vue-mastery-logo.png" />
     </div>
   </a>
 </div>
 
-## What is Vue? {#what-is-vue}
+## Vue คืออะไร? {#what-is-vue}
 
-Vue (pronounced /vjuː/, like **view**) is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative, component-based programming model that helps you efficiently develop user interfaces of any complexity.
+Vue (ออกเสียงว่า วิว) เป็น JavaScript framework สำหรับสร้างหน้าเว็บไซต์เพื่อติดต่อกับผู้ใช้งาน(user interfaces). โดยสร้างมาจากพื้นฐานภาษาของ HTML, CSS เเละ JavaScript พร้อมทั้งรองรับการเขียนในรูปแบบของ component-based ซึ่งจะช่วยให้คุณสามารถพัฒนาเว็บไซต์สำหรับติดต่อกับผู้ใช้งานได้อย่างมีประสิทธิภาพ ไม่ว่าจะเขียนซับซ้อนมากขนาดไหนก็ตาม
 
-Here is a minimal example:
+นี่เป็นตัวอย่างฉบับย่อ:
 
 <div class="options-api">
 
@@ -63,12 +63,12 @@ createApp({
 ```vue-html
 <div id="app">
   <button @click="count++">
-    Count is: {{ count }}
+    จำนวนการกด : {{ count }}
   </button>
 </div>
 ```
 
-**Result**
+**ผลลัพธ์**
 
 <script setup>
 import { ref } from 'vue'
@@ -77,42 +77,42 @@ const count = ref(0)
 
 <div class="demo">
   <button @click="count++">
-    Count is: {{ count }}
+    จำนวนการกด : {{ count }}
   </button>
 </div>
 
-The above example demonstrates the two core features of Vue:
+จากตัวอย่างด้านบนจะเเสดง 2 คุณสมบัติของ vue:
 
-- **Declarative Rendering**: Vue extends standard HTML with a template syntax that allows us to declaratively describe HTML output based on JavaScript state.
+- **การประมวลผลเชิงบรรยาย (Declarative Rendering)**: Vue ได้เพิ่มความสามารถพื้นฐานของ HTML ด้วยวิธีการใช้ไวยากรณ์เทมเพลต (Template syntax) ที่ทำให้เราสามารถอธิบายผลลัพธ์ของ HTML ตามค่าสถานะ (State) ของ JavaScript.
 
-- **Reactivity**: Vue automatically tracks JavaScript state changes and efficiently updates the DOM when changes happen.
+- **การทำงานแบบตอบสนอง (Reactivity)**: Vue จะติดตามการเปลี่ยนแปลงค่าสถานะของ JavaScript โดยอัตโนมัติ เเละอัปเดต DOM อย่างมีประสิทธิภาพเมื่อเกิดการเปลี่ยนแปลง.
 
-You may already have questions - don't worry. We will cover every little detail in the rest of the documentation. For now, please read along so you can have a high-level understanding of what Vue offers.
+คุณอาจจะมีคำถามอยู่แล้ว - ไม่ต้องกังวล เราจะครอบคลุมทุกเรื่องในเอกสารนี้ ในตอนนี้โปรดอ่านต่อเพื่อให้คุณมีความเข้าใจภาพรวมของสิ่งที่ Vue นำเสนอ
 
-:::tip Prerequisites
-The rest of the documentation assumes basic familiarity with HTML, CSS, and JavaScript. If you are totally new to frontend development, it might not be the best idea to jump right into a framework as your first step - grasp the basics and then come back! You can check your knowledge level with these overviews for [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript), [HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML) and [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps) if needed. Prior experience with other frameworks helps, but is not required.
+:::tip ข้อกำหนดเบื้องต้น
+เนื้อหาที่เหลือของเอกสารนี้ถือว่าคุณมีความคุ้นเคยเบื้องต้นกับ HTML, CSS และ JavaScript หากคุณเป็นมือใหม่สำหรับการพัฒนาเว็บ frontend อาจจะไม่ใช่ไอเดียที่ดีที่จะเริ่มต้นด้วยเฟรมเวิร์กในทันที ควรเข้าใจพื้นฐานก่อนแล้วค่อยกลับมา คุณสามารถตรวจสอบระดับความรู้ของคุณได้จากบทสรุปเหล่านี้: [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript), [HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML), และ [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps) ประสบการณ์ก่อนหน้ากับเฟรมเวิร์กอื่นอาจช่วยได้ แต่ไม่จำเป็น
 :::
 
-## The Progressive Framework {#the-progressive-framework}
+## Framework แห่งยุคสมัย (เฟรมเวิร์กที่พัฒนาตามคุณ) {#the-progressive-framework}
 
-Vue is a framework and ecosystem that covers most of the common features needed in frontend development. But the web is extremely diverse - the things we build on the web may vary drastically in form and scale. With that in mind, Vue is designed to be flexible and incrementally adoptable. Depending on your use case, Vue can be used in different ways:
+Vue เป็นเฟรมเวิร์กและระบบนิเวศ (ecosystem) ที่ครอบคลุมฟีเจอร์หลักที่จำเป็นในการพัฒนาเว็บ frontend แต่เนื่องจากโลกของเว็บนั้นมีความหลากหลายมาก สิ่งที่เราสร้างบนเว็บอาจแตกต่างกันอย่างมากในรูปแบบและขนาด ด้วยเหตุนี้ Vue จึงถูกออกแบบมาให้ยืดหยุ่นและสามารถนำไปใช้ได้ทีละนิดตามความต้องการของคุณ:
 
-- Enhancing static HTML without a build step
-- Embedding as Web Components on any page
-- Single-Page Application (SPA)
-- Fullstack / Server-Side Rendering (SSR)
-- Jamstack / Static Site Generation (SSG)
-- Targeting desktop, mobile, WebGL, and even the terminal
+- เพิ่มประสิทธิภาพให้กับ HTML แบบ static โดยไม่ต้องใช้ขั้นตอน build
+- ฝังเป็น Web Components บนหน้าใดก็ได้
+- สร้างแอปแบบหน้าเดียว (Single-Page Application - SPA)
+- รองรับ Fullstack / การเรนเดอร์ฝั่งเซิร์ฟเวอร์ (Server-Side Rendering - SSR)
+- Jamstack / การสร้างเว็บไซต์แบบ static (Static Site Generation - SSG)
+- รองรับการทำงานบนเดสก์ท็อป, มือถือ, WebGL และแม้กระทั่งการทำงานบน terminal
 
-If you find these concepts intimidating, don't worry! The tutorial and guide only require basic HTML and JavaScript knowledge, and you should be able to follow along without being an expert in any of these.
+ถ้าคุณรู้สึกว่าแนวคิดเหล่านี้ยากไม่ต้องกังวล! บทเรียนและคู่มือจำเป็นต้องใช้เพียงความรู้พื้นฐานของ HTML และ JavaScript และคุณควรจะตามเนื้อหาได้แม้จะยังไม่เป็นผู้เชี่ยวชาญในเรื่องเหล่านี้
 
-If you are an experienced developer interested in how to best integrate Vue into your stack, or you are curious about what these terms mean, we discuss them in more detail in [Ways of Using Vue](/guide/extras/ways-of-using-vue).
+หากคุณเป็นนักพัฒนาที่มีประสบการณ์และสนใจวิธีการผสาน Vue เข้ากับ stack ของคุณ หรืออยากรู้ว่าคำเหล่านี้หมายถึงอะไร เราจะอธิบายรายละเอียดเพิ่มเติมในหัวข้อ [Ways of Using Vue (วิธีการใช้งาน Vue)](/guide/extras/ways-of-using-vue)
 
-Despite the flexibility, the core knowledge about how Vue works is shared across all these use cases. Even if you are just a beginner now, the knowledge gained along the way will stay useful as you grow to tackle more ambitious goals in the future. If you are a veteran, you can pick the optimal way to leverage Vue based on the problems you are trying to solve, while retaining the same productivity. This is why we call Vue "The Progressive Framework": it's a framework that can grow with you and adapt to your needs.
+ถึงแม้ว่า Vue จะยืดหยุ่น แต่ความรู้พื้นฐานเกี่ยวกับการทำงานของ Vue นั้นใช้ได้กับทุกกรณีการใช้งาน แม้ว่าตอนนี้คุณจะเป็นเพียงผู้เริ่มต้น ความรู้ที่ได้มาจะยังมีประโยชน์เมื่อคุณเติบโตและรับมือกับโปรเจ็กต์ที่ซับซ้อนมากขึ้นในอนาคต หากคุณเป็นผู้เชี่ยวชาญแล้ว คุณสามารถเลือกวิธีที่เหมาะสมที่สุดในการใช้ประโยชน์จาก Vue ตามปัญหาที่คุณกำลังแก้ไข ในขณะที่ยังคงรักษาประสิทธิภาพในการทำงาน นี่คือเหตุผลที่เราเรียก Vue ว่า "เฟรมเวิร์กที่พัฒนาตามคุณ": มันเป็นเฟรมเวิร์กที่สามารถเติบโตไปพร้อมกับคุณและปรับตัวตามความต้องการของคุณ
 
-## Single-File Components {#single-file-components}
+## คอมโพเเนนซ์แบบไฟล์เดียว (Single-File Components) {#single-file-components}
 
-In most build-tool-enabled Vue projects, we author Vue components using an HTML-like file format called **Single-File Component** (also known as `*.vue` files, abbreviated as **SFC**). A Vue SFC, as the name suggests, encapsulates the component's logic (JavaScript), template (HTML), and styles (CSS) in a single file. Here's the previous example, written in SFC format:
+ในโปรเจ็กต์ Vue ที่ใช้เครื่องมือ build เราจะเขียนคอมโพเนนต์ของ Vue โดยใช้รูปแบบไฟล์ที่คล้ายกับ HTML ที่เรียกว่า **Single-File Component** (หรือไฟล์ที่มีนามสกุล `*.vue` เรียกย่อว่า **SFC**) ซึ่ง SFC ของ Vue ตามชื่อคือการรวบรวมตรรกะของคอมโพเนนต์ (JavaScript), เทมเพลต (HTML), และสไตล์ (CSS) ไว้ในไฟล์เดียว นี่คือตัวอย่างก่อนหน้านี้ที่เขียนในรูปแบบ SFC:
 
 <div class="options-api">
 
@@ -160,72 +160,71 @@ button {
 
 </div>
 
-SFC is a defining feature of Vue and is the recommended way to author Vue components **if** your use case warrants a build setup. You can learn more about the [how and why of SFC](/guide/scaling-up/sfc) in its dedicated section - but for now, just know that Vue will handle all the build tools setup for you.
+SFC เป็นฟีเจอร์หลักของ Vue และเป็นวิธีแนะนำในการเขียนคอมโพเนนต์ของ Vue **หาก** กรณีการใช้งานของคุณจำเป็นต้องใช้เครื่องมือ build คุณสามารถเรียนรู้เพิ่มเติมเกี่ยวกับ [วิธีและเหตุผลของการใช้ SFC](/guide/scaling-up/sfc) ในหัวข้อเฉพาะ - แต่ตอนนี้เพียงแค่รู้ว่า Vue จะจัดการเครื่องมือ build ให้คุณเอง
 
-## API Styles {#api-styles}
+## สไตล์การเขียน {#api-styles}
 
-Vue components can be authored in two different API styles: **Options API** and **Composition API**.
+คอมโพเนนต์ของ Vue สามารถเขียนได้ใน 2 สไตล์ API ที่แตกต่างกัน: **Options API** และ **Composition API**
 
 ### Options API {#options-api}
 
-With Options API, we define a component's logic using an object of options such as `data`, `methods`, and `mounted`. Properties defined by options are exposed on `this` inside functions, which points to the component instance:
+ใน Options API เราจะกำหนดตรรกะ (logic) ของคอมโพเนนต์โดยใช้ object ของ options เช่น `data`, `methods`, และ `mounted` คุณสมบัติที่กำหนดโดย options จะถูกเปิดเผยบน `this` ภายในฟังก์ชัน ซึ่งชี้ไปยังอินสแตนซ์ของคอมโพเนนต์:
 
 ```vue
 <script>
 export default {
-  // Properties returned from data() become reactive state
-  // and will be exposed on `this`.
+  // Properties ที่ return จาก data() จะกลายเป็น state ที่สามารถตอบสนอง (reactive)
+  // และจะสามารถเข้าถึงได้บน `this`.
   data() {
     return {
       count: 0
     }
   },
 
-  // Methods are functions that mutate state and trigger updates.
-  // They can be bound as event handlers in templates.
+  // Methods เป็นฟังก์ชันที่ใช้เปลี่ยนแปลง state และทำให้เกิดการอัปเดตหน้าจอ
+  // สามารถถูกผูกให้เป็น event handler ใน template ได้
   methods: {
     increment() {
       this.count++
     }
   },
 
-  // Lifecycle hooks are called at different stages
-  // of a component's lifecycle.
-  // This function will be called when the component is mounted.
+  // Lifecycle hooks จะถูกเรียกในแต่ละช่วงของ lifecycle ของ component
+  // ฟังก์ชันนี้จะถูกเรียกเมื่อตัว component ถูก mount (ตอนที่ component ถูกแทรกเข้าไปใน DOM)
   mounted() {
-    console.log(`The initial count is ${this.count}.`)
+    console.log(`จำนวนเริ่มต้นคือ ${this.count}.`)
   }
 }
 </script>
 
 <template>
-  <button @click="increment">Count is: {{ count }}</button>
+  <button @click="increment">จำนวน คือ: {{ count }}</button>
 </template>
 ```
 
-[Try it in the Playground](https://play.vuejs.org/#eNptkMFqxCAQhl9lkB522ZL0HNKlpa/Qo4e1ZpLIGhUdl5bgu9es2eSyIMio833zO7NP56pbRNawNkivHJ25wV9nPUGHvYiaYOYGoK7Bo5CkbgiBBOFy2AkSh2N5APmeojePCkDaaKiBt1KnZUuv3Ky0PppMsyYAjYJgigu0oEGYDsirYUAP0WULhqVrQhptF5qHQhnpcUJD+wyQaSpUd/Xp9NysVY/yT2qE0dprIS/vsds5Mg9mNVbaDofL94jZpUgJXUKBCvAy76ZUXY53CTd5tfX2k7kgnJzOCXIF0P5EImvgQ2olr++cbRE4O3+t6JxvXj0ptXVpye1tvbFY+ge/NJZt)
+[ลองใช้ใน Playground](https://play.vuejs.org/#eNptkMFqxCAQhl9lkB522ZL0HNKlpa/Qo4e1ZpLIGhUdl5bgu9es2eSyIMio833zO7NP56pbRNawNkivHJ25wV9nPUGHvYiaYOYGoK7Bo5CkbgiBBOFy2AkSh2N5APmeojePCkDaaKiBt1KnZUuv3Ky0PppMsyYAjYJgigu0oEGYDsirYUAP0WULhqVrQhptF5qHQhnpcUJD+wyQaSpUd/Xp9NysVY/yT2qE0dprIS/vsds5Mg9mNVbaDofL94jZpUgJXUKBCvAy76ZUXY53CTd5tfX2k7kgnJzOCXIF0P5EImvgQ2olr++cbRE4O3+t6JxvXj0ptXVpye1tvbFY+ge/NJZt)
 
 ### Composition API {#composition-api}
 
-With Composition API, we define a component's logic using imported API functions. In SFCs, Composition API is typically used with [`<script setup>`](/api/sfc-script-setup). The `setup` attribute is a hint that makes Vue perform compile-time transforms that allow us to use Composition API with less boilerplate. For example, imports and top-level variables / functions declared in `<script setup>` are directly usable in the template.
+ใน Composition API เราจะกำหนดตรรกะของคอมโพเนนต์โดยใช้ฟังก์ชัน API ที่นำเข้า ใน SFCs Composition API มักจะใช้กับ [`<script setup>`](/api/sfc-script-setup) คำสั่ง `setup` เป็นตัวชี้ให้ Vue ทำการแปลงแบบ compile-time ที่ช่วยให้เราสามารถใช้ Composition API ได้ด้วยโค้ดที่เรียบง่ายขึ้น ตัวอย่างเช่น imports และตัวแปร/ฟังก์ชันที่ประกาศใน `<script setup>` สามารถนำไปใช้ในเทมเพลตได้โดยตรง
 
-Here is the same component, with the exact same template, but using Composition API and `<script setup>` instead:
+นี่คือตัวอย่างเดียวกัน แต่เขียนโดยใช้ Composition API และ `<script setup>`:
 
 ```vue
 <script setup>
 import { ref, onMounted } from 'vue'
 
-// reactive state
+// สถานะ reactive
 const count = ref(0)
 
-// functions that mutate state and trigger updates
+// ฟังก์ชันที่เปลี่ยนแปลงสถานะและทำให้เกิดการอัปเดต
 function increment() {
   count.value++
 }
 
 // lifecycle hooks
 onMounted(() => {
-  console.log(`The initial count is ${count.value}.`)
+  console.log(`ค่าเริ่มต้นคือ ${count.value}.`)
 })
 </script>
 
@@ -234,49 +233,49 @@ onMounted(() => {
 </template>
 ```
 
-[Try it in the Playground](https://play.vuejs.org/#eNpNkMFqwzAQRH9lMYU4pNg9Bye09NxbjzrEVda2iLwS0spQjP69a+yYHnRYad7MaOfiw/tqSliciybqYDxDRE7+qsiM3gWGGQJ2r+DoyyVivEOGLrgRDkIdFCmqa1G0ms2EELllVKQdRQa9AHBZ+PLtuEm7RCKVd+ChZRjTQqwctHQHDqbvMUDyd7mKip4AGNIBRyQujzArgtW/mlqb8HRSlLcEazrUv9oiDM49xGGvXgp5uT5his5iZV1f3r4HFHvDprVbaxPhZf4XkKub/CDLaep1T7IhGRhHb6WoTADNT2KWpu/aGv24qGKvrIrr5+Z7hnneQnJu6hURvKl3ryL/ARrVkuI=)
+[ลองใช้ใน Playground](https://play.vuejs.org/#eNpNkMFqwzAQRH9lMYU4pNg9Bye09NxbjzrEVda2iLwS0spQjP69a+yYHnRYad7MaOfiw/tqSliciybqYDxDRE7+qsiM3gWGGQJ2r+DoyyVivEOGLrgRDkIdFCmqa1G0ms2EELllVKQdRQa9AHBZ+PLtuEm7RCKVd+ChZRjTQqwctHQHDqbvMUDyd7mKip4AGNIBRyQujzArgtW/mlqb8HRSlLcEazrUv9oiDM49xGGvXgp5uT5his5iZV1f3r4HFHvDprVbaxPhZf4XkKub/CDLaep1T7IhGRhHb6WoTADNT2KWpu/aGv24qGKvrIrr5+Z7hnneQnJu6hURvKl3ryL/ARrVkuI=)
 
-### Which to Choose? {#which-to-choose}
+### เลือกใช้ API แบบไหนดี? {#which-to-choose}
 
-Both API styles are fully capable of covering common use cases. They are different interfaces powered by the exact same underlying system. In fact, the Options API is implemented on top of the Composition API! The fundamental concepts and knowledge about Vue are shared across the two styles.
+ทั้งสอง API styles รองรับการใช้งานหลักได้เหมือนกัน พวกมันเป็นอินเทอร์เฟซที่แตกต่างกัน แต่ขับเคลื่อนด้วยระบบเดียวกัน ในความเป็นจริง Options API ถูกสร้างขึ้นบนพื้นฐานของ Composition API! แนวคิดพื้นฐานและความรู้เกี่ยวกับการทำงานของ Vue ถูกแชร์ระหว่างสองสไตล์นี้
 
-The Options API is centered around the concept of a "component instance" (`this` as seen in the example), which typically aligns better with a class-based mental model for users coming from OOP language backgrounds. It is also more beginner-friendly by abstracting away the reactivity details and enforcing code organization via option groups.
+Options API มุ่งเน้นไปที่แนวคิดของ "component instance" (`this` ที่เห็นในตัวอย่าง) ซึ่งเหมาะกับผู้ใช้ที่คุ้นเคยกับการเขียนโปรแกรมเชิงวัตถุ (OOP) มากกว่า นอกจากนี้ยังเหมาะสำหรับผู้เริ่มต้นเพราะมันซ่อนรายละเอียดการทำงานของระบบ reactive ไว้และจัดโครงสร้างโค้ดผ่านกลุ่มตัวเลือกต่าง ๆ
 
-The Composition API is centered around declaring reactive state variables directly in a function scope and composing state from multiple functions together to handle complexity. It is more free-form and requires an understanding of how reactivity works in Vue to be used effectively. In return, its flexibility enables more powerful patterns for organizing and reusing logic.
+Composition API มุ่งเน้นการประกาศสถานะ reactive โดยตรงในฟังก์ชันและรวมสถานะจากหลายฟังก์ชันเพื่อจัดการกับความซับซ้อน มันมีความยืดหยุ่นมากกว่า แต่ก็ต้องการความเข้าใจเกี่ยวกับการทำงานของระบบ reactive ใน Vue เพื่อใช้งานอย่างมีประสิทธิภาพ อย่างไรก็ตาม ความยืดหยุ่นนี้ช่วยให้เราสร้างรูปแบบการจัดการโค้ดที่ทรงพลังยิ่งขึ้นสำหรับการจัดการและนำกลับมาใช้ใหม่
 
-You can learn more about the comparison between the two styles and the potential benefits of Composition API in the [Composition API FAQ](/guide/extras/composition-api-faq).
+คุณสามารถเรียนรู้เพิ่มเติมเกี่ยวกับการเปรียบเทียบทั้งสองสไตล์ และข้อดีของ Composition API ใน [FAQ ของ Composition API](/guide/extras/composition-api-faq)
 
-If you are new to Vue, here's our general recommendation:
+หากคุณเป็นมือใหม่กับ Vue นี่คือคำแนะนำทั่วไป:
 
-- For learning purposes, go with the style that looks easier to understand to you. Again, most of the core concepts are shared between the two styles. You can always pick up the other style later.
+- สำหรับการเรียนรู้ ให้เลือกใช้สไตล์ที่คุณรู้สึกว่าเข้าใจได้ง่ายกว่า อีกครั้งที่แนวคิดหลักส่วนใหญ่ถูกแชร์ระหว่างสองสไตล์ คุณสามารถเรียนรู้สไตล์อีกแบบได้ภายหลัง
 
-- For production use:
+- สำหรับการใช้งานจริง:
 
-  - Go with Options API if you are not using build tools, or plan to use Vue primarily in low-complexity scenarios, e.g. progressive enhancement.
+  - เลือกใช้ Options API หากคุณไม่ได้ใช้เครื่องมือ build หรือวางแผนจะใช้ Vue ในสถานการณ์ที่ไม่ซับซ้อน เช่น progressive enhancement
 
-  - Go with Composition API + Single-File Components if you plan to build full applications with Vue.
+  - เลือกใช้ Composition API + Single-File Components หากคุณวางแผนจะสร้างแอปพลิเคชันเต็มรูปแบบด้วย Vue
 
-You don't have to commit to only one style during the learning phase. The rest of the documentation will provide code samples in both styles where applicable, and you can toggle between them at any time using the **API Preference switches** at the top of the left sidebar.
+คุณไม่จำเป็นต้องยึดติดกับสไตล์ใดสไตล์หนึ่งในช่วงการเรียนรู้ เอกสารที่เหลือจะมีตัวอย่างโค้ดในทั้งสองสไตล์ และคุณสามารถสลับระหว่างพวกมันได้ตลอดเวลาผ่าน **API Preference switches** ที่ด้านบนของแถบด้านข้างซ้าย
 
-## Still Got Questions? {#still-got-questions}
+## ยังมีคำถามอีกไหม? {#still-got-questions}
 
-Check out our [FAQ](/about/faq).
+ตรวจสอบ [FAQ](/about/faq) ของเรา
 
-## Pick Your Learning Path {#pick-your-learning-path}
+## เลือกเส้นทางการเรียนรู้ของคุณ {#pick-your-learning-path}
 
-Different developers have different learning styles. Feel free to pick a learning path that suits your preference - although we do recommend going over all of the content, if possible!
+นักพัฒนาแต่ละคนมีรูปแบบการเรียนรู้ที่แตกต่างกัน คุณสามารถเลือกเส้นทางการเรียนรู้ที่เหมาะกับคุณได้อย่างอิสระ - แต่เราขอแนะนำให้คุณอ่านเนื้อหาทั้งหมด หากเป็นไปได้!
 
 <div class="vt-box-container next-steps">
   <a class="vt-box" href="/tutorial/">
-    <p class="next-steps-link">Try the Tutorial</p>
-    <p class="next-steps-caption">For those who prefer learning things hands-on.</p>
+    <p class="next-steps-link">ลองทำตามบทเรียน</p>
+    <p class="next-steps-caption">สำหรับผู้ที่ชอบเรียนรู้ผ่านการปฏิบัติ</p>
   </a>
   <a class="vt-box" href="/guide/quick-start.html">
-    <p class="next-steps-link">Read the Guide</p>
-    <p class="next-steps-caption">The guide walks you through every aspect of the framework in full detail.</p>
+    <p class="next-steps-link">อ่านคู่มือ</p>
+    <p class="next-steps-caption">คู่มือนี้จะนำคุณผ่านทุกแง่มุมของเฟรมเวิร์กอย่างละเอียด</p>
   </a>
   <a class="vt-box" href="/examples/">
-    <p class="next-steps-link">Check out the Examples</p>
-    <p class="next-steps-caption">Explore examples of core features and common UI tasks.</p>
+    <p class="next-steps-link">ดูตัวอย่าง</p>
+    <p class="next-steps-caption">สำรวจตัวอย่างคุณสมบัติหลักและงาน UI ทั่วไป</p>
   </a>
 </div>
