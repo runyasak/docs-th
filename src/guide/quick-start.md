@@ -6,182 +6,182 @@ footer: false
 import { VTCodeGroup, VTCodeGroupTab } from '@vue/theme'
 </script>
 
-# Quick Start {#quick-start}
+# เริ่มต้นใช้งานอย่างรวดเร็ว {#quick-start}
 
-## Try Vue Online {#try-vue-online}
+## ลองใช้ Vue ออนไลน์ {#try-vue-online}
 
-- To quickly get a taste of Vue, you can try it directly in our [Playground](https://play.vuejs.org/#eNo9jcEKwjAMhl/lt5fpQYfXUQfefAMvvRQbddC1pUuHUPrudg4HIcmXjyRZXEM4zYlEJ+T0iEPgXjn6BB8Zhp46WUZWDjCa9f6w9kAkTtH9CRinV4fmRtZ63H20Ztesqiylphqy3R5UYBqD1UyVAPk+9zkvV1CKbCv9poMLiTEfR2/IXpSoXomqZLtti/IFwVtA9A==).
+- หากต้องการลองใช้งาน Vue อย่างรวดเร็ว คุณสามารถลองใช้ได้โดยตรงที่ [พื้นที่ทดลอง](https://play.vuejs.org/#eNo9jcEKwjAMhl/lt5fpQYfXUQfefAMvvRQbddC1pUuHUPrudg4HIcmXjyRZXEM4zYlEJ+T0iEPgXjn6BB8Zhp46WUZWDjCa9f6w9kAkTtH9CRinV4fmRtZ63H20Ztesqiylphqy3R5UYBqD1UyVAPk+9zkvV1CKbCv9poMLiTEfR2/IXpSoXomqZLtti/IFwVtA9A==).
 
-- If you prefer a plain HTML setup without any build steps, you can use this [JSFiddle](https://jsfiddle.net/yyx990803/2ke1ab0z/) as your starting point.
+- หากคุณชอบการตั้งค่า HTML แบบง่าย ๆ โดยไม่ต้องใช้การ build คุณสามารถใช้ [JSFiddle](https://jsfiddle.net/yyx990803/2ke1ab0z/) เป็นจุดเริ่มต้น
 
-- If you are already familiar with Node.js and the concept of build tools, you can also try a complete build setup right within your browser on [StackBlitz](https://vite.new/vue).
+- หากคุณคุ้นเคยกับ Node.js และเครื่องมือ build อยู่แล้ว คุณสามารถลองใช้งานชุดการตั้งค่า build ได้ในเบราว์เซอร์ของคุณที่ [StackBlitz](https://vite.new/vue)
 
-## Creating a Vue Application {#creating-a-vue-application}
+## การสร้างแอปพลิเคชัน Vue {#creating-a-vue-application}
 
-:::tip Prerequisites
+:::tip ข้อกำหนดเบื้องต้น
 
-- Familiarity with the command line
-- Install [Node.js](https://nodejs.org/) version 18.3 or higher
+- ความคุ้นเคยกับการใช้งาน command line
+- ติดตั้ง [Node.js](https://nodejs.org/) เวอร์ชัน 18.3 หรือสูงกว่า
   :::
 
-In this section we will introduce how to scaffold a Vue [Single Page Application](/guide/extras/ways-of-using-vue#single-page-application-spa) on your local machine. The created project will be using a build setup based on [Vite](https://vitejs.dev) and allow us to use Vue [Single-File Components](/guide/scaling-up/sfc) (SFCs).
+ในส่วนนี้ เราจะอธิบายวิธีการสร้างโครงสร้างพื้นฐานของ [Single Page Application](/guide/extras/ways-of-using-vue#single-page-application-spa) ด้วย Vue บนเครื่องของคุณ โครงการที่สร้างขึ้นจะใช้ชุดการตั้งค่าการ build ที่อิงกับ [Vite](https://vitejs.dev) และช่วยให้เราสามารถใช้งาน [Single-File Components](/guide/scaling-up/sfc) (SFCs) ได้
 
-Make sure you have an up-to-date version of [Node.js](https://nodejs.org/) installed and your current working directory is the one where you intend to create a project. Run the following command in your command line (without the `$` sign):
+ตรวจสอบให้แน่ใจว่าคุณติดตั้ง [Node.js](https://nodejs.org/) เวอร์ชันล่าสุดและไดเรกทอรีที่คุณทำงานเป็นตำแหน่งที่คุณต้องการสร้างโปรเจ็กต์ ใช้คำสั่งต่อไปนี้ใน command line ของคุณ (ไม่รวม `$`):
 
 <VTCodeGroup>
   <VTCodeGroupTab label="npm">
 
-  ```sh
-  $ npm create vue@latest
-  ```
+```sh
+$ npm create vue@latest
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="pnpm">
 
-  ```sh
-  $ pnpm create vue@latest
-  ```
+```sh
+$ pnpm create vue@latest
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="yarn">
 
-  ```sh
-  # For Yarn (v1+)
-  $ yarn create vue
-
-  # For Yarn Modern (v2+)
-  $ yarn create vue@latest
-  
-  # For Yarn ^v4.11
-  $ yarn dlx create-vue@latest
-  ```
+```sh
+# สำหรับ Yarn (v1+)
+$ yarn create vue
+           
+# สำหรับ Yarn Modern (v2+)
+$ yarn create vue@latest
+           
+# สำหรับ Yarn ^v4.11
+$ yarn dlx create-vue@latest
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="bun">
 
-  ```sh
-  $ bun create vue@latest
-  ```
+```sh
+$ bun create vue@latest
+```
 
   </VTCodeGroupTab>
 </VTCodeGroup>
 
-This command will install and execute [create-vue](https://github.com/vuejs/create-vue), the official Vue project scaffolding tool. You will be presented with prompts for several optional features such as TypeScript and testing support:
+คำสั่งนี้จะติดตั้งและเรียกใช้ [create-vue](https://github.com/vuejs/create-vue) ซึ่งเป็นเครื่องมือสร้างโครงสร้างโปรเจ็กต์อย่างเป็นทางการของ Vue คุณจะได้รับคำถามเกี่ยวกับฟีเจอร์เพิ่มเติมต่าง ๆ เช่น การรองรับ TypeScript และการทดสอบ:
 
-<div class="language-sh"><pre><code><span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Project name: <span style="color:#888;">… <span style="color:#89DDFF;">&lt;</span><span style="color:#888;">your-project-name</span><span style="color:#89DDFF;">&gt;</span></span></span>
-<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Add TypeScript? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">No</span> / Yes</span></span>
-<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Add JSX Support? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">No</span> / Yes</span></span>
-<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Add Vue Router for Single Page Application development? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">No</span> / Yes</span></span>
-<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Add Pinia for state management? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">No</span> / Yes</span></span>
-<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Add Vitest for Unit testing? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">No</span> / Yes</span></span>
-<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Add an End-to-End Testing Solution? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">No</span> / Cypress / Nightwatch / Playwright</span></span>
-<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Add ESLint for code quality? <span style="color:#888;">… No / <span style="color:#89DDFF;text-decoration:underline">Yes</span></span></span>
-<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Add Prettier for code formatting? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">No</span> / Yes</span></span>
-<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Add Vue DevTools 7 extension for debugging? (experimental) <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">No</span> / Yes</span></span>
+<div class="language-sh"><pre><code><span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">ชื่อโปรเจ็กต์: <span style="color:#888;">… <span style="color:#89DDFF;">&lt;</span><span style="color:#888;">ชื่อโปรเจ็กต์ของคุณ</span><span style="color:#89DDFF;">&gt;</span></span></span>
+<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">เพิ่ม TypeScript หรือไม่? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">ไม่</span> / ใช่</span></span>
+<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">เพิ่ม JSX Support หรือไม่? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">ไม่</span> / ใช่</span></span>
+<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">เพิ่ม Vue Router สำหรับพัฒนา Single Page Application หรือไม่? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">ไม่</span> / ใช่</span></span>
+<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">เพิ่ม Pinia สำหรับการจัดการสถานะหรือไม่? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">ไม่</span> / ใช่</span></span>
+<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">เพิ่ม Vitest สำหรับการทดสอบหน่วยหรือไม่? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">ไม่</span> / ใช่</span></span>
+<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">เพิ่มโซลูชันการทดสอบ End-to-End หรือไม่? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">ไม่</span> / Cypress / Nightwatch / Playwright</span></span>
+<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">เพิ่ม ESLint สำหรับตรวจสอบคุณภาพของโค้ดหรือไม่? <span style="color:#888;">… ไม่ / <span style="color:#89DDFF;text-decoration:underline">ใช่</span></span></span>
+<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">เพิ่ม Prettier สำหรับจัดรูปแบบโค้ดหรือไม่? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">ไม่</span> / ใช่</span></span>
+<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">เพิ่มส่วนขยาย Vue DevTools 7 สำหรับการดีบักหรือไม่? (experimental) <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">ไม่</span> / ใช่</span></span>
 <span></span>
-<span style="color:#A6ACCD;">Scaffolding project in ./<span style="color:#89DDFF;">&lt;</span><span style="color:#888;">your-project-name</span><span style="color:#89DDFF;">&gt;</span>...</span>
-<span style="color:#A6ACCD;">Done.</span></code></pre></div>
+<span style="color:#A6ACCD;">สร้างโปรเจ็กต์ใน ./<span style="color:#89DDFF;">&lt;</span><span style="color:#888;">ชื่อโปรเจ็กต์ของคุณ</span><span style="color:#89DDFF;">&gt;</span>...</span>
+<span style="color:#A6ACCD;">เสร็จสิ้น.</span></code></pre></div>
 
-If you are unsure about an option, simply choose `No` by hitting enter for now. Once the project is created, follow the instructions to install dependencies and start the dev server:
-
-<VTCodeGroup>
-  <VTCodeGroupTab label="npm">
-
-  ```sh-vue
-  $ cd {{'<your-project-name>'}}
-  $ npm install
-  $ npm run dev
-  ```
-
-  </VTCodeGroupTab>
-  <VTCodeGroupTab label="pnpm">
-
-  ```sh-vue
-  $ cd {{'<your-project-name>'}}
-  $ pnpm install
-  $ pnpm run dev
-  ```
-
-  </VTCodeGroupTab>
-  <VTCodeGroupTab label="yarn">
-
-  ```sh-vue
-  $ cd {{'<your-project-name>'}}
-  $ yarn
-  $ yarn dev
-  ```
-
-  </VTCodeGroupTab>
-  <VTCodeGroupTab label="bun">
-
-  ```sh-vue
-  $ cd {{'<your-project-name>'}}
-  $ bun install
-  $ bun run dev
-  ```
-
-  </VTCodeGroupTab>
-</VTCodeGroup>
-
-You should now have your first Vue project running! Note that the example components in the generated project are written using the [Composition API](/guide/introduction#composition-api) and `<script setup>`, rather than the [Options API](/guide/introduction#options-api). Here are some additional tips:
-
-- The recommended IDE setup is [Visual Studio Code](https://code.visualstudio.com/) + [Vue - Official extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar). If you use other editors, check out the [IDE support section](/guide/scaling-up/tooling#ide-support).
-- More tooling details, including integration with backend frameworks, are discussed in the [Tooling Guide](/guide/scaling-up/tooling).
-- To learn more about the underlying build tool Vite, check out the [Vite docs](https://vitejs.dev).
-- If you choose to use TypeScript, check out the [TypeScript Usage Guide](typescript/overview).
-
-When you are ready to ship your app to production, run the following:
+หากคุณไม่แน่ใจเกี่ยวกับตัวเลือกใด ให้เลือก `ไม่` โดยการกด enter ในตอนนี้ เมื่อโปรเจ็กต์ถูกสร้างแล้ว ให้ทำตามคำแนะนำเพื่อติดตั้ง dependencies และเริ่ม dev server:
 
 <VTCodeGroup>
   <VTCodeGroupTab label="npm">
 
-  ```sh
-  $ npm run build
-  ```
+```sh-vue
+$ cd {{'<ชื่อโปรเจ็กต์ของคุณ>'}}
+$ npm install
+$ npm run dev
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="pnpm">
 
-  ```sh
-  $ pnpm run build
-  ```
+```sh-vue
+$ cd {{'<ชื่อโปรเจ็กต์ของคุณ>'}}
+$ pnpm install
+$ pnpm run dev
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="yarn">
 
-  ```sh
-  $ yarn build
-  ```
+```sh-vue
+$ cd {{'<ชื่อโปรเจ็กต์ของคุณ>'}}
+$ yarn
+$ yarn dev
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="bun">
 
-  ```sh
-  $ bun run build
-  ```
+```sh-vue
+$ cd {{'<ชื่อโปรเจ็กต์ของคุณ>'}}
+$ bun install
+$ bun run dev
+```
 
   </VTCodeGroupTab>
 </VTCodeGroup>
 
-This will create a production-ready build of your app in the project's `./dist` directory. Check out the [Production Deployment Guide](/guide/best-practices/production-deployment) to learn more about shipping your app to production.
+ตอนนี้คุณควรจะมีโปรเจ็กต์ Vue แรกของคุณที่กำลังทำงานแล้ว! โปรดทราบว่าคอมโพเนนต์ตัวอย่างในโปรเจ็กต์ที่สร้างขึ้นจะถูกเขียนโดยใช้ [Composition API](/guide/introduction#composition-api) และ `<script setup>` แทนที่จะเป็น [Options API](/guide/introduction#options-api) นี่คือคำแนะนำเพิ่มเติม:
 
-[Next Steps >](#next-steps)
+- การตั้งค่า IDE ที่แนะนำคือ [Visual Studio Code](https://code.visualstudio.com/) + [ส่วนขยายทางการของ Vue](https://marketplace.visualstudio.com/items?itemName=Vue.volar) หากคุณใช้ตัวแก้ไขอื่น ๆ ให้ตรวจสอบ [ส่วนการรองรับ IDE](/guide/scaling-up/tooling#ide-support).
+- รายละเอียดเพิ่มเติมเกี่ยวกับเครื่องมือ รวมถึงการผสานรวมกับเฟรมเวิร์กฝั่ง backend อยู่ใน [คู่มือเครื่องมือ](guide/scaling-up/tooling).
+- หากต้องการเรียนรู้เพิ่มเติมเกี่ยวกับเครื่องมือ build ที่ใช้เบื้องหลัง ให้ตรวจสอบ [Vite docs](https://vitejs.dev).
+- หากคุณเลือกใช้ TypeScript ให้ดู [คู่มือการใช้งาน TypeScript](typescript/overview).
 
-## Using Vue from CDN {#using-vue-from-cdn}
+เมื่อคุณพร้อมที่จะนำแอปของคุณไปผลิต ให้รันคำสั่งต่อไปนี้:
 
-You can use Vue directly from a CDN via a script tag:
+<VTCodeGroup>
+  <VTCodeGroupTab label="npm">
+
+```sh
+$ npm run build
+```
+
+  </VTCodeGroupTab>
+  <VTCodeGroupTab label="pnpm">
+
+```sh
+$ pnpm run build
+```
+
+  </VTCodeGroupTab>
+  <VTCodeGroupTab label="yarn">
+
+```sh
+$ yarn build
+```
+
+  </VTCodeGroupTab>
+  <VTCodeGroupTab label="bun">
+
+```sh
+$ bun run build
+```
+
+  </VTCodeGroupTab>
+</VTCodeGroup>
+
+คำสั่งนี้จะสร้างแอพลิเคชั่นสำหรับการนำไปใช้งานจริง (Production) โดยจะถูกเก็บเอาไว้ในไดเรกทอรี `./dist` ของโปรเจ็กต์คุณ ตรวจสอบ [คู่มือการปรับใช้ในโปรดักชัน](/guide/best-practices/production-deployment) เพื่อเรียนรู้เพิ่มเติมเกี่ยวกับการนำแอปของคุณไปใช้งานจริง
+
+[ขั้นตอนถัดไป >](#next-steps)
+
+## การใช้ Vue จาก CDN {#using-vue-from-cdn}
+
+คุณสามารถใช้ Vue ได้โดยตรงจาก CDN ผ่านแท็ก script:
 
 ```html
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 ```
 
-Here we are using [unpkg](https://unpkg.com/), but you can also use any CDN that serves npm packages, for example [jsdelivr](https://www.jsdelivr.com/package/npm/vue) or [cdnjs](https://cdnjs.com/libraries/vue). Of course, you can also download this file and serve it yourself.
+ในที่นี้เราใช้ [unpkg](https://unpkg.com/), แต่คุณยังสามารถใช้ CDN ใดก็ได้ที่ให้บริการแพ็กเกจ npm เช่น [jsdelivr](https://www.jsdelivr.com/package/npm/vue) หรือ [cdnjs](https://cdnjs.com/libraries/vue) แน่นอน คุณยังสามารถดาวน์โหลดไฟล์นี้และให้บริการด้วยตัวเองได้เช่นกัน
 
-When using Vue from a CDN, there is no "build step" involved. This makes the setup a lot simpler, and is suitable for enhancing static HTML or integrating with a backend framework. However, you won't be able to use the Single-File Component (SFC) syntax.
+เมื่อใช้ Vue จาก CDN จะไม่มี "ขั้นตอนการ build" ที่เกี่ยวข้อง ซึ่งทำให้การตั้งค่าง่ายขึ้นมาก และเหมาะสำหรับการเพิ่มประสิทธิภาพให้กับ HTML แบบสแตติกหรือการผสานรวมกับเฟรมเวิร์กฝั่ง backend อย่างไรก็ตาม คุณจะไม่สามารถใช้ไวยากรณ์ของ Single-File Component (SFC) ได้
 
-### Using the Global Build {#using-the-global-build}
+### การใช้ Global Build {#using-the-global-build}
 
-The above link loads the _global build_ of Vue, where all top-level APIs are exposed as properties on the global `Vue` object. Here is a full example using the global build:
+ลิงก์ข้างต้นโหลด _global build_ ของ Vue ซึ่ง API ระดับบนทั้งหมดถูกแสดงเป็นพร็อพเพอร์ตี้ในออบเจ็กต์ `Vue` นี่คือตัวอย่างเต็ม ๆ ของการใช้ global build:
 
 <div class="options-api">
 
@@ -203,7 +203,7 @@ The above link loads the _global build_ of Vue, where all top-level APIs are exp
 </script>
 ```
 
-[CodePen Demo >](https://codepen.io/vuejs-examples/pen/QWJwJLp)
+[ตัวอย่างใน CodePen >](https://codepen.io/vuejs-examples/pen/QWJwJLp)
 
 </div>
 
@@ -228,17 +228,17 @@ The above link loads the _global build_ of Vue, where all top-level APIs are exp
 </script>
 ```
 
-[CodePen Demo >](https://codepen.io/vuejs-examples/pen/eYQpQEG)
+[ตัวอย่างใน Codepen >](https://codepen.io/vuejs-examples/pen/eYQpQEG)
 
 :::tip
-Many of the examples for Composition API throughout the guide will be using the `<script setup>` syntax, which requires build tools. If you intend to use Composition API without a build step, consult the usage of the [`setup()` option](/api/composition-api-setup).
+ตัวอย่างหลายตัวอย่างสำหรับ Composition API ในคู่มือจะใช้ไวยากรณ์ `<script setup>` ซึ่งจำเป็นต้องใช้เครื่องมือ build หากคุณต้องการใช้ Composition API โดยไม่ต้องมีขั้นตอนการ build โปรดดูการใช้งานตัวเลือก [`setup()`](/api/composition-api-setup)
 :::
 
 </div>
 
-### Using the ES Module Build {#using-the-es-module-build}
+### การใช้ ES Module Build {#using-the-es-module-build}
 
-Throughout the rest of the documentation, we will be primarily using [ES modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) syntax. Most modern browsers now support ES modules natively, so we can use Vue from a CDN via native ES modules like this:
+ในส่วนที่เหลือของเอกสารนี้ เราจะใช้ไวยากรณ์ [ES modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) เป็นหลัก เบราว์เซอร์สมัยใหม่ส่วนใหญ่รองรับ ES modules โดยกำเนิดอยู่แล้ว (natively) ดังนั้นเราสามารถใช้ Vue จาก CDN ผ่าน ES modules ได้ดังนี้:
 
 <div class="options-api">
 
@@ -281,28 +281,28 @@ Throughout the rest of the documentation, we will be primarily using [ES modules
 
 </div>
 
-Notice that we are using `<script type="module">`, and the imported CDN URL is pointing to the **ES modules build** of Vue instead.
+โปรดสังเกตว่าเราใช้ `<script type="module">` และ URL ของ CDN ที่นำเข้าจะชี้ไปที่ **ES modules build** ของ Vue
 
 <div class="options-api">
 
-[CodePen Demo >](https://codepen.io/vuejs-examples/pen/VwVYVZO)
+[ตัวอย่างใน CodePen >](https://codepen.io/vuejs-examples/pen/VwVYVZO)
 
 </div>
 <div class="composition-api">
 
-[CodePen Demo >](https://codepen.io/vuejs-examples/pen/MWzazEv)
+[ตัวอย่างใน CodePen >](https://codepen.io/vuejs-examples/pen/MWzazEv)
 
 </div>
 
-### Enabling Import maps {#enabling-import-maps}
+### การเปิดใช้งาน Import maps {#enabling-import-maps}
 
-In the above example, we are importing from the full CDN URL, but in the rest of the documentation you will see code like this:
+ในตัวอย่างข้างต้น เราได้นำเข้าจาก URL ของ CDN โดยตรง แต่ในส่วนที่เหลือของเอกสารนี้ คุณจะเห็นโค้ดที่มีลักษณะดังนี้:
 
 ```js
 import { createApp } from 'vue'
 ```
 
-We can teach the browser where to locate the `vue` import by using [Import Maps](https://caniuse.com/import-maps):
+เราสามารถสอนเบราว์เซอร์ให้รู้ว่าจะค้นหาการนำเข้า `vue` ได้ที่ไหนโดยใช้ [Import Maps](https://caniuse.com/import-maps):
 
 <div class="options-api">
 
@@ -330,7 +330,7 @@ We can teach the browser where to locate the `vue` import by using [Import Maps]
 </script>
 ```
 
-[CodePen Demo >](https://codepen.io/vuejs-examples/pen/wvQKQyM)
+[ตัวอย่างใน CodePen >](https://codepen.io/vuejs-examples/pen/wvQKQyM)
 
 </div>
 
@@ -361,25 +361,25 @@ We can teach the browser where to locate the `vue` import by using [Import Maps]
 </script>
 ```
 
-[CodePen Demo >](https://codepen.io/vuejs-examples/pen/YzRyRYM)
+[ตัวอย่างใน CodePen >](https://codepen.io/vuejs-examples/pen/YzRyRYM)
 
 </div>
 
-You can also add entries for other dependencies to the import map - but make sure they point to the ES modules version of the library you intend to use.
+คุณสามารถเพิ่มรายการสำหรับ dependencies อื่น ๆ ลงใน import map ได้เช่นกัน แต่ต้องแน่ใจว่ามันชี้ไปที่เวอร์ชันของ ES modules ของไลบรารีที่คุณต้องการใช้
 
-:::tip Import Maps Browser Support
-Import Maps is a relatively new browser feature. Make sure to use a browser within its [support range](https://caniuse.com/import-maps). In particular, it is only supported in Safari 16.4+.
+:::tip การรองรับเบราว์เซอร์ของ Import Maps
+Import Maps เป็นฟีเจอร์ที่ค่อนข้างใหม่ของเบราว์เซอร์ อย่าลืมใช้เบราว์เซอร์ที่อยู่ในช่วง [การรองรับ](https://caniuse.com/import-maps) โดยเฉพาะอย่างยิ่ง รองรับเฉพาะใน Safari 16.4+
 :::
 
-:::warning Notes on Production Use
-The examples so far are using the development build of Vue - if you intend to use Vue from a CDN in production, make sure to check out the [Production Deployment Guide](/guide/best-practices/production-deployment#without-build-tools).
+:::warning หมายเหตุเกี่ยวกับการใช้งานในโปรดักชัน
+ตัวอย่างที่เราใช้มาจนถึงตอนนี้ใช้ development build ของ Vue - หากคุณตั้งใจจะใช้ Vue จาก CDN ในโปรดักชัน ตรวจสอบ [คู่มือการปรับใช้ในโปรดักชัน](/guide/best-practices/production-deployment#without-build-tools)
 
-While it is possible to use Vue without a build system, an alternative approach to consider is using [`vuejs/petite-vue`](https://github.com/vuejs/petite-vue) that could better suit the context where [`jquery/jquery`](https://github.com/jquery/jquery) (in the past) or [`alpinejs/alpine`](https://github.com/alpinejs/alpine) (in the present) might be used instead.
+ถึงแม้ว่าจะสามารถใช้ Vue ได้โดยไม่ต้องใช้ build system วิธีการทางเลือกที่ควรพิจารณาคือการใช้ [`vuejs/petite-vue`](https://github.com/vuejs/petite-vue) ซึ่งอาจเหมาะกับบริบทที่เคยใช้ [`jquery/jquery`](https://github.com/jquery/jquery) (ในอดีต) หรือ [`alpinejs/alpine`](https://github.com/alpinejs/alpine) (ในปัจจุบัน) แทน
 :::
 
-### Splitting Up the Modules {#splitting-up-the-modules}
+### การแยกโมดูล {#splitting-up-the-modules}
 
-As we dive deeper into the guide, we may need to split our code into separate JavaScript files so that they are easier to manage. For example:
+เมื่อเราลงลึกในคู่มือ เราอาจจำเป็นต้องแยกโค้ดออกเป็นไฟล์ JavaScript แยกต่างหาก เพื่อให้จัดการได้ง่ายขึ้น ตัวอย่างเช่น:
 
 ```html
 <!-- index.html -->
@@ -422,29 +422,29 @@ export default {
 
 </div>
 
-If you directly open the above `index.html` in your browser, you will find that it throws an error because ES modules cannot work over the `file://` protocol, which is the protocol the browser uses when you open a local file.
+หากคุณเปิด `index.html` ข้างต้นในเบราว์เซอร์โดยตรง คุณจะพบว่ามันเกิดข้อผิดพลาด เนื่องจาก ES modules ไม่สามารถทำงานผ่านโปรโตคอล `file://` ซึ่งเป็นโปรโตคอลที่เบราว์เซอร์ใช้เมื่อคุณเปิดไฟล์แบบ Local file
 
-Due to security reasons, ES modules can only work over the `http://` protocol, which is what the browsers use when opening pages on the web. In order for ES modules to work on our local machine, we need to serve the `index.html` over the `http://` protocol, with a local HTTP server.
+เนื่องด้วยเหตุผลด้านความปลอดภัย ES modules สามารถทำงานได้ผ่านโปรโตคอล `http://` เท่านั้น ซึ่งเป็นโปรโตคอลที่เบราว์เซอร์ใช้เมื่อเปิดหน้าเว็บ ในการทำให้ ES modules ทำงานบนเครื่องของเรา เราจำเป็นต้องให้บริการ `index.html` ผ่านโปรโตคอล `http://` โดยใช้ local HTTP server.
 
-To start a local HTTP server, first make sure you have [Node.js](https://nodejs.org/en/) installed, then run `npx serve` from the command line in the same directory where your HTML file is. You can also use any other HTTP server that can serve static files with the correct MIME types.
+ในการเริ่มเซิร์ฟเวอร์แบบ local HTTP server ให้ตรวจสอบว่าคุณได้ติดตั้ง [Node.js](https://nodejs.org/en/) แล้ว จากนั้นรันคำสั่ง `npx serve` จาก command line ในไดเรกทอรีเดียวกับไฟล์ HTML ของคุณ คุณยังสามารถใช้เซิร์ฟเวอร์ HTTP อื่น ๆ ที่สามารถให้บริการไฟล์สแตติกพร้อมประเภท MIME ที่ถูกต้องได้เช่นกัน
 
-You may have noticed that the imported component's template is inlined as a JavaScript string. If you are using VS Code, you can install the [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) extension and prefix the strings with a `/*html*/` comment to get syntax highlighting for them.
+คุณอาจสังเกตเห็นว่าตัวอย่างเทมเพลตของคอมโพเนนต์ถูก inlined เป็นสตริง JavaScript หากคุณใช้ VS Code คุณสามารถติดตั้ง [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) เพื่อให้ไฮไลต์ไวยากรณ์สำหรับสตริงเหล่านี้โดยการเพิ่มคำสั่ง `/*html*/` ที่หน้าสตริง
 
-## Next Steps {#next-steps}
+## ขั้นตอนถัดไป {#next-steps}
 
-If you skipped the [Introduction](/guide/introduction), we strongly recommend reading it before moving on to the rest of the documentation.
+หากคุณข้าม [บทนำ](/guide/introduction) ไป เราขอแนะนำให้อ่านก่อนที่จะดำเนินการต่อไปยังส่วนที่เหลือของเอกสาร
 
 <div class="vt-box-container next-steps">
   <a class="vt-box" href="/guide/essentials/application.html">
-    <p class="next-steps-link">Continue with the Guide</p>
-    <p class="next-steps-caption">The guide walks you through every aspect of the framework in full detail.</p>
+    <p class="next-steps-link">ดำเนินการต่อตามคู่มือ</p>
+    <p class="next-steps-caption">คู่มือนี้จะนำคุณผ่านทุกแง่มุมของเฟรมเวิร์กอย่างละเอียด</p>
   </a>
   <a class="vt-box" href="/tutorial/">
-    <p class="next-steps-link">Try the Tutorial</p>
-    <p class="next-steps-caption">For those who prefer learning things hands-on.</p>
+    <p class="next-steps-link">ลองทำตามบทเรียน</p>
+    <p class="next-steps-caption">สำหรับผู้ที่ชอบเรียนรู้ผ่านการปฏิบัติ</p>
   </a>
   <a class="vt-box" href="/examples/">
-    <p class="next-steps-link">Check out the Examples</p>
-    <p class="next-steps-caption">Explore examples of core features and common UI tasks.</p>
+    <p class="next-steps-link">ดูตัวอย่าง</p>
+    <p class="next-steps-caption">สำรวจตัวอย่างคุณสมบัติหลักและงาน UI ทั่วไป</p>
   </a>
 </div>
