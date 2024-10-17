@@ -45,6 +45,7 @@ const nav: ThemeConfig['nav'] = [
         text: 'ทรัพยากรที่มี',
         items: [
           { text: 'พาร์ทเนอร์', link: '/partners/' },
+          { text: 'นักพัฒนา', link: '/developers/' },
           { text: 'ธีม', link: '/ecosystem/themes' },
           { text: 'UI Components', link: 'https://ui-libs.vercel.app/' },
           {
@@ -134,9 +135,13 @@ const nav: ThemeConfig['nav'] = [
     link: '/sponsor/'
   },
   {
-    text: 'พาร์ทเนอร์',
-    link: '/partners/',
-    activeMatch: `^/partners/`
+    text: 'ผู้เชี่ยวชาญ',
+    badge: { text: 'NEW' },
+    activeMatch: `^/(partners|developers)/`,
+    items: [
+      { text: 'พาร์ทเนอร์', link: '/partners/' },
+      { text: 'นักพัฒนา', link: '/developers/', badge: { text: 'NEW' } }
+    ]
   }
 ]
 
@@ -377,6 +382,10 @@ export const sidebar: ThemeConfig['sidebar'] = {
         {
           text: 'Dependency Injection',
           link: '/api/composition-api-dependency-injection'
+        },
+        {
+          text: 'Helpers',
+          link: '/api/composition-api-helpers'
         }
       ]
     },
@@ -426,6 +435,7 @@ export const sidebar: ThemeConfig['sidebar'] = {
     {
       text: 'Advanced APIs',
       items: [
+        { text: 'Custom Elements', link: '/api/custom-elements' },
         { text: 'Render Function', link: '/api/render-function' },
         { text: 'Server-Side Rendering', link: '/api/ssr' },
         { text: 'TypeScript Utility Types', link: '/api/utility-types' },

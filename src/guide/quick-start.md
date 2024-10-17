@@ -46,9 +46,12 @@ $ pnpm create vue@latest
   <VTCodeGroupTab label="yarn">
 
 ```sh
+# สำหรับ Yarn (v1+)
+$ yarn create vue
+           
 # สำหรับ Yarn Modern (v2+)
 $ yarn create vue@latest
-
+           
 # สำหรับ Yarn ^v4.11
 $ yarn dlx create-vue@latest
 ```
